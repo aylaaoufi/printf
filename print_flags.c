@@ -1,12 +1,6 @@
 #include "main.h"
 
-/**
- * plus_flag - printf + flag.
- * @arg: va arg.
- * @format: printf format.
- * Return: int length of the inpue.
-*/
-int plus_flag(va_list arg, const char *format)
+int flags(va_list arg, const char *format)
 {
 	int i = 0, j = 0, found = 0, len = 0;
 
@@ -37,13 +31,8 @@ int plus_flag(va_list arg, const char *format)
 	}
 	return (len);
 }
-/**
- * hashtag_flag - printf # flag.
- * @arg: va arg.
- * @format: printf format.
- * Return: int length of the inpue.
-*/
-int hashtag_flag(va_list arg, const char *format)
+
+int hashtag(va_list arg, const char *format)
 {
 	int i = 0, j = 0, found = 0, len = 0;
 
