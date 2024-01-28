@@ -46,8 +46,5 @@ If everything is succesful the function returns the number of characteres printe
 ## Printf Project
 This project is an implementation of the printf function in the C programming language. </br>
 The printf function is used to print formatted output to the standard output stream.
-###
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=2000&pause=500&color=f034fd&multiline=true&width=355&height=80&lines=printf%28%22Printf%20project%20collab%20;AadelAferyad%20and%20ACHUX21%22%29%3B)](https://git.io/typing-svg)
 
 ## [aylaaoufi](https://github.com/aylaaoufi)
