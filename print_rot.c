@@ -1,12 +1,6 @@
 #include "main.h"
 
-/**
- * print_rot - print rot13.
- * @arg: string to print.
- * Return: length.
-*/
-
-int print_rot(va_list arg)
+int rottt(va_list arg)
 {
 	char *s = va_arg(arg, char *);
 	char c;
