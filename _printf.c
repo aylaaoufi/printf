@@ -1,10 +1,6 @@
 #include "main.h"
-/**
- * _printf - printf function for printing.
- * @format: printf format.
- * Return: int length of the inpue.
-*/
-int _printf(const char *format, ...)
+
+int printf_a(const char *format, ...)
 {
 	fm format_redear[] = {{"%c", print_char}, {"%s", print_string},
 							{"%d", print_integer}, {"%i", print_integer}, {"%u", print_unsigned},
@@ -17,33 +13,26 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	len = fun_helper(format, arg, format_redear);
+	len = printf_b(format, arg, format_redear);
 
-	return (len); /*removed (len - 1)*/
+	return (len)
 }
-/**
- * fun_helper - helper function for printingd.
- * @format: string.
- * @arg: string.
- * @format_redear: string.
- * Return: Integer representation.
-*/
-int fun_helper(const char *format, va_list arg, struct formats *format_redear)
+int printf_b(const char *format, va_list arg, struct formats *format_redear)
 {
 	int i = -1, j = 0, len = 0, k;
 
 	for (; format[++i]; j = 0, k = 0)
 	{
-		if (format[i] == 37) /* % yd */
+		if (format[i] == 37)
 		{
-			if (format[i + 1] == 32 || format[i + 1] == 9) /*%   %*/
+			if (format[i + 1] == 32 || format[i + 1] == 9)
 				i++;
-			if (format[i + 1] == 37) /* printf "%%" */
+			if (format[i + 1] == 37)
 			{
 				i++, len += _putchar(format[i]);
 				continue;
 			}
-			if (format[i + 1] == '+' || format[i + 1] == '#') /*"%+d"*/
+			if (format[i + 1] == '+' || format[i + 1] == '#')
 			{
 				if (format[i + 1] == '#')
 					len += hashtag_flag(arg, format + i), i += 2;
@@ -51,7 +40,7 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 					len += plus_flag(arg, format + i), i += 2;
 				continue;
 			}
-			while (format_redear[j].f) /* %   yd*/
+			while (format_redear[j].f)
 			{
 				if (format[i + 1] == format_redear[j].f[1])
 				{
