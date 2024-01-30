@@ -1,11 +1,22 @@
 #include "main.h"
 
-int putcharput(char c)
+/**
+ * _putchar - print a character.
+ * @c: char.
+ * Return: return 1 (length).
+*/
+
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+/**
+ * _puts - print a character.
+ * @s: pointer to character string.
+ * Return: return 1.
+*/
 
-int puts(char *s)
+int _puts(char *s)
 {
 	int i = -1;
 
@@ -13,8 +24,13 @@ int puts(char *s)
 		_putchar(s[i]);
 	return (i);
 }
+/**
+ * reverse - print reverse array.
+ * @str: pointer to int array of int.
+ * Return: return length.
+*/
 
-int reverse_puts(char *str)
+int reverse(char *str)
 {
 	int i = 0, len = -1;
 	char *arr = str;
@@ -29,8 +45,13 @@ int reverse_puts(char *str)
 	}
 	return (len);
 }
+/**
+ * _put_HEX - print hex string with given string
+ * @c: pointer to int array
+ * Return: return length of string
+*/
 
-int putsbb(char c)
+int _put_HEX(char c)
 {
 	int len = 0;
 

@@ -1,6 +1,10 @@
 #include "main.h"
-
-int string_printf(va_list arg)
+/**
+ * print_string - print a string representation.
+ * @arg: string to print.
+ * Return: string representation.
+*/
+int print_string(va_list arg)
 {
 	char *str;
 	int len = 0;
@@ -16,29 +20,33 @@ int string_printf(va_list arg)
 
 	return (len);
 }
-
-int printf_ff(va_list arg)
+/**
+ * print_S - print a string representation
+ * @arg: string to print.
+ * Return: string representation.
+*/
+int print_S(va_list arg)
 {
-	char *ayoub = va_arg(arg, char *);
+	char *haruma = va_arg(arg, char *);
 	int len = 0;
 	int i;
 
-	if (!ayoub)
+	if (!haruma)
 	{
-		ayoub = "(null)";
-		return (_puts(ayoub));
+		haruma = "(null)";
+		return (_puts(haruma));
 	}
-	for (i = 0; ayoub[i] != '\0'; i++)
+	for (i = 0; haruma[i] != '\0'; i++)
 	{
-		if (ayoub[i] < 32 || ayoub[i] >= 127)
+		if (haruma[i] < 32 || haruma[i] >= 127)
 		{
 			len += _putchar('\\');
 			len += _putchar('x');
-			len += _put_HEX(ayoub[i]);
+			len += _put_HEX(haruma[i]);
 		}
 		else
 		{
-			len += _putchar(ayoub[i]);
+			len += _putchar(haruma[i]);
 		}
 	}
 	return (len);

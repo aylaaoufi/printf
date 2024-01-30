@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * h_Integer - Function helper to print integers.
+ * @n: integer value.
+ * Return: The number of characters printed (length).
+ */
 int h_Integer(int n)
 {
 	int len = 0;
@@ -33,6 +37,11 @@ int h_Integer(int n)
 
 	return (len);
 }
+/**
+ * print_integer - Prints an integer.
+ * @arg: The argument list containing the integer to be printed.
+ * Return: The number of characters printed.
+ */
 
 int print_integer(va_list arg)
 {
@@ -40,6 +49,11 @@ int print_integer(va_list arg)
 
 	return (h_Integer(n));
 }
+/**
+ * print_unsigned - Prints an unsigned integer.
+ * @arg: The argument list containing the un integer to be printed.
+ * Return: The number of characters printed.
+ */
 
 int print_unsigned(va_list arg)
 {

@@ -1,6 +1,10 @@
 #include "main.h"
-
-int address(va_list args)
+/**
+ * print_address - print the address
+ * @args: argument array
+ * Return: pointer to the address
+*/
+int print_address(va_list args)
 {
 	unsigned long int var = (unsigned long int)va_arg(args, void *);
 	int num;

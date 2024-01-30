@@ -5,6 +5,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct formats - Struct formats
+ *
+ * @f: The specifier.
+ * @print: The function associated.
+ */
 struct formats
 {
 	char *f;
@@ -35,4 +41,4 @@ int print_rot(va_list arg);
 int print_address(va_list args);
 int plus_flag(va_list arg, const char *format);
 int hashtag_flag(va_list arg, const char *format);
-#endif
+#endif /*PRINTF_H*/
